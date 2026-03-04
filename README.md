@@ -1,2 +1,1 @@
-# BuddhistQuotations
-Web API Version of "The imitation of Buddha - Quotations from buddhist literature for each day in the year" from Ernest M. Bowden
+The data in this API was extracted from Ernest M. Bowden's work 'The Imitation of Buddha: Quotations from Buddhist Scripture for Every Day in the Year,' originally published in 1891 and currently in the public domain.
