@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cbyago/BuddhistQuotations/schemas/quote-schema.json",
+  "title": "Monthly Quotes Schema",
+  "description": "Schema for validating monthly Buddhist quote files.",
+  "type": "object",
+  "required": ["month", "days"],
+  "properties": {
+    "month": {
+      "type": "string",
+      "description": "The full name of the month (e.g., January)."
+    },
+    "days": {
+      "type": "array",
+      "description": "List of days containing quotes for the specific month.",
+      "items": {
+        "type": "object",
+        "required": ["day", "quotes"],
+        "properties": {
+          "day": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31,
+            "description": "The day of the month."
+          },
+          "quotes": {
+            "type": "array",
+            "minItems": 1,
+            "description": "Collection of quotes and their sources for this specific day.",
+            "items": {
+              "type": "object",
+              "required": ["text", "source"],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "description": "The actual content of the quote."
+                },
+                "source": {
+                  "type": "string",
+                  "description": "The literary work or historical origin of the quote."
+                },
+                "note": {
+                  "type": "string",
+                  "description": "Optional footnote or additional contextual information."
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
