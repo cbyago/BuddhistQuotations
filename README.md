@@ -13,8 +13,8 @@ The repository is organized by language and month to facilitate future translati
 ```text
 /data
   /en/                (English - Original Source)
-    january.json
-    february.json
+    01.json
+    02.json
     ...
 /schemas
   quote-schema.json   (JSON Schema for validation)
